@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>PenaltyShooterFEI | Jogar</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body id="jogo">
+    <div class="headerjogo">
+        <div class="logo">
+            <img src="Images/logo.png" alt="logo">
+        </div>
+        <div class="links">
+            <a href="home.html">Início</a>
+            <a href="about.html">Sobre Nós</a>
+            <div class="selected">
+                <a id="botaojogo" href="game.html">Jogar</a>
+            </div>
+        </div>
+    </div>
+    <div id="menu">
+        <div class="container">
+            <img src="Images/menu.png" alt="menu">
+            <div id="comojogar">
+                <input id="button2" type="button" value="Como Jogar" onClick="comojogar();">
+                <div id="comojogartexto">
+                    <img id="comojogarimg" src="Images/comojogar.png" alt="comojogar();">
+                    <input id="button3" type="button" value="Ok!" onClick="fecharcomojogar();">
+                </div>
+            </div>
+            <div id="buttons">
+                <div>
+                    <label for="campo">Selecione o campo: &nbsp;</label>
+                    <select name="campo" id="campo">
+                        <option value="campo1">Básico</option>
+                        <option value="campo2">Realista</option>
+                        <option value="campo3">Aprimorado</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="bola">Selecione a bola: &nbsp;</label>
+                    <select name="bola" id="bola">
+                        <option value="bola1">Básica</option>
+                        <option value="bola2">Realista</option>
+                        <option value="bola3">Aprimorada</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="goleiro">Selecione o goleiro: &nbsp;</label>
+                    <select name="goleiro" id="goleiro">
+                        <option value="goleiro1">Padrão</option>
+                        <option value="goleiro2">Isaac</option>
+                        <option value="goleiro3">Fagner</option>
+                    </select>
+                </div>
+                <input id="button1" type="button" value="Jogar" onClick="start();">
+            </div>
+        </div>
+    </div>
+    <div id="canvas">
+        <canvas id="myCanvas" width="1100" height="600"></canvas>
+    </div>
+    <div id="fim">
+        <div class="container">
+            <img src="Images/fim_de_jogo.png" alt="fim_de_jogo">
+            <div id="results">
+                <div>
+                    <p id="golsatualP"></p>
+                    <p id="recordeP"></p>
+                </div>
+                <div>
+                    <input id="buttonreset" type="button" value="Jogar Novamente" onClick="jogarNovamente();">
+                    <input id="buttonmenu" type="button" value="Voltar ao Menu" onClick="voltarMenu();">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
